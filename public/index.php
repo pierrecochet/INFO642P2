@@ -15,8 +15,9 @@ $router = new League\Route\Router;
 
 // map a route
 $router->map('GET', '/', 'App\Controllers\HomeController::index');
-$router->map('GET', '/test','App\Controllers\HomeController::test');
+$router->map('GET', '/login','App\Controllers\HomeController::login');
 $router->map('POST', '/','App\Controllers\HomeController::testpost');
+
 
 
 $response = $router->dispatch($request);

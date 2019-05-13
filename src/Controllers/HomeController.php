@@ -4,24 +4,27 @@ namespace App\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response;
-use App\View\Test;
+use App\View\Login;
 
 class HomeController{
 	function index(){
-		$response = new Response();
-	    $response->getBody()->write('<h1>Hello, World!</h1>');
-	    return $response;
+		header('Location:  /login');
 	}
 
-	function test(){
+	function login(){
 		$response = new Response();
-	    $response->getBody()->write(Test::oui());
+	    $response->getBody()->write(Login::voidlogin());
 	    return $response;
 	}
 
 	function testpost(ServerRequestInterface $request){
 	    $response = new Response();
-        $response->getBody()->write($request->getParsedBody()["oui"]);
+        $response->getBody()->write($request->getParsedBody()["id"]);
         return $response;
 	}
+    function testpost1(ServerRequestInterface $request){
+        $response = new Response();
+        $response->getBody()->write($request->getParsedBody()["mdp"]);
+        return $response;
+    }
 }
