@@ -4,11 +4,11 @@ namespace App\View;
 
 class Login {
 
-	static function oui(){
+	static function voidlogin(){
 		return "<!DOCTYPE html>
 			<html>
 			<head>
-				<title>test</title>
+				<title>login</title>
 			</head>
 			<body>
 				<form action=\"/\" method=\"post\">
