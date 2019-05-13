@@ -2,6 +2,8 @@
 
 include '../vendor/autoload.php';
 
+error_reporting(E_ALL);
+
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -13,6 +15,9 @@ $router = new League\Route\Router;
 
 // map a route
 $router->map('GET', '/', 'App\Controllers\HomeController::index');
+$router->map('GET', '/test','App\Controllers\HomeController::test');
+$router->map('POST', '/','App\Controllers\HomeController::testpost');
+
 
 $response = $router->dispatch($request);
 
