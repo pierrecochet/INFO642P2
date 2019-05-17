@@ -34,12 +34,13 @@ class LoginController{
 	}
 
     function loginPost(ServerRequestInterface $request){
-	    $id = $request->getParsedBody()['name'];
+	    $username = $request->getParsedBody()['name'];
         $pwd = $request->getParsedBody()['password'];
-        $conn = Etudiant::check_connexion($id,$pwd);
+        $conn = Etudiant::check_connexion($username,$pwd);
         if($etudiant = Etudiant::check_connexion()) {
             session_start();
-            $_SESSION["auth"]=$request->getParsedBody();
+            $_SESSION["auth"]["name"]=$username;
+            $_SESSION["auth"]["pasword"]=$pwd;
             //return view main etudiant
         }
         if($intervenant = Intervenant::check_connexion()) {
