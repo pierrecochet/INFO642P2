@@ -6,7 +6,7 @@ class Enseignement extends Model {
 
 	protected $id_Enseignement;
 	protected $label;
-    protected $table="Enseignement";
+    static protected $table="Enseignement";
 
     /**
      * @return mixed
@@ -39,9 +39,4 @@ class Enseignement extends Model {
     {
         $this->label = $label;
     }
-
-    }
-  
-   
-    
 } 
