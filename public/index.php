@@ -26,6 +26,7 @@ $router->map('GET', '/test/{id}','App\Controllers\LoginController::test');
 
 
 
+
 $response = $router->dispatch($request);
 
 // send the response to the browser
