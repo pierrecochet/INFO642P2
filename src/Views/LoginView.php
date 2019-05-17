@@ -11,22 +11,23 @@ class LoginView {
 <head>
 	<title>FrancoProject</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="/css/styleLogin.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="login__bg">
-		<img class="login__img" src="/images/129763.jpg">
+	<div class="background">
+		<img class="bg__img" src="/images/129763.jpg">
 		<div class="login__layer">
-			<form action="/login" method="post" class="login__form">
+			<h2 class="login__title">FrancoPROJECT</h2>
+			<form action="." method="post" class="login__form">
 				<div class="login__form__text">
-					<input type="text" name="name" id="name" placeholder="Username">
+					<input class="login__input" type="text" name="name" id="name" placeholder="Username">
 				</div>
 				<div class="login__form__text">
-					<input type="Password" name="password" id="password" placeholder="Password">
+					<input class="login__input" type="Password" name="Password" id="Password" placeholder="Password">
 				</div>
 				<div class="login__form__submit">
-					<input type="submit" value="Subscribe!">
+					<input class="login__button" type="submit" value="Se Connecter">
 				</div>
 			</form>
 		</div>
