@@ -2,36 +2,31 @@
 
 namespace App\Models;
 
-use PDO;
 
 class Model {
-    private $host = 'localhost';
-    private $dbname = 'intervenants_db';
-    private $username = 'root';
-    private $password = 'root';
-    protected $dbh;
-    protected $table;
+    static protected $table;
 
     function __construct(){
-    	try {
-    		$this->dbh = new PDO('mysql:host='.$this->host.';dbname='.$this->dbname, $this->username, $this->password);
-		} catch (PDOException $e) {
-		    print "Erreur !: " . $e->getMessage() . "<br/>";
-		    die();
-		}
     }
 
-    function get_by_id($id){
-    	$table = $this->table;
-        $result = $this->dbh->query('SELECT * from '.$table.' WHERE id_'.$table.' = '.$id);
-        foreach($result as $row){
-            foreach($row as $col=>$value) {
-                $this->$col = $value;
-//                if($col == "password")
-//                    var_dump($value);
-            }
-        }
-        return $this;
+    static function get_by_id($id){
+        $db = Database::get_instance();
+        $class = get_called_class();
+    	$table = $class::$table;
+        $result = $db->get_dbh()->prepare('SELECT * from '.$table.' WHERE id_'.$table.' = '.$id);
+        $result->execute();
+        $instance = $result->fetchObject($class);
+        return $instance;
+    }
+
+    static function get_all(){
+        $db = Database::get_instance();
+        $class = get_called_class();
+        $table = $class::$table;
+        $result = $db->get_dbh()->prepare('SELECT * from '.$table);
+        $result->execute();
+        $list = $result->fetchAll(PDO::FETCH_OBJECT,$class);
+        return $list;
     }
   
   

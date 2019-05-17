@@ -1,32 +1,34 @@
 <?php
 
+
 namespace App\Models;
 
-class Etudiant extends Model {
 
-	protected $id_Etudiant;
-	protected $identifiant;
+class Intervenant extends Model
+{
+    protected $id_Intervenant;
+    protected $identifiant;
     protected $password;
     protected $nom;
     protected $prenom;
-    protected $formation;
     protected $mail;
-    static protected $table="Etudiant";
+    static protected $table="Intervenant";
+    protected $id_Domaine;
 
     /**
      * @return mixed
      */
-    public function getIdEtudiant()
+    public function getIdIntervenant()
     {
-        return $this->id_Etudiant;
+        return $this->id_Intervenant;
     }
 
     /**
-     * @param mixed $id_Etudiant
+     * @param mixed $id_Intervenant
      */
-    public function setIdEtudiant($id_Etudiant)
+    public function setIdIntervenant($id_Intervenant)
     {
-        $this->id_Etudiant = $id_Etudiant;
+        $this->id_Intervenant = $id_Intervenant;
     }
 
     /**
@@ -96,22 +98,6 @@ class Etudiant extends Model {
     /**
      * @return mixed
      */
-    public function getFormation()
-    {
-        return $this->formation;
-    }
-
-    /**
-     * @param mixed $formation
-     */
-    public function setFormation($formation)
-    {
-        $this->formation = $formation;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getMail()
     {
         return $this->mail;
@@ -124,7 +110,36 @@ class Etudiant extends Model {
     {
         $this->mail = $mail;
     }
-  
-   
-    
-} 
+
+    /**
+     * @return string
+     */
+    public function getTable()
+    {
+        return $this->table;
+    }
+
+    /**
+     * @param string $table
+     */
+    public function setTable($table)
+    {
+        $this->table = $table;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdDomaine()
+    {
+        return $this->id_Domaine;
+    }
+
+    /**
+     * @param mixed $id_Domaine
+     */
+    public function setIdDomaine($id_Domaine)
+    {
+        $this->id_Domaine = $id_Domaine;
+    }
+}
