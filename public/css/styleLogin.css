@@ -64,6 +64,8 @@ body{
 	margin: 5px 0;
 	width: 100%;
 	font-size: 16px;
+	font-family: Work Sans, Clear Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+
 }
 
 .login__input::placeholder {
@@ -83,6 +85,8 @@ body{
 	padding: 10px 0px;
 	background: #bf1844;
     color: #fdd9cb;
-    font-weight: 550; 
+    font-weight: 600; 
 	font-size: 16px;
+	text-transform: uppercase;
+	font-family: Work Sans, Clear Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
