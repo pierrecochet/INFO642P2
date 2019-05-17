@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-family: Work Sans, Clear Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.6;
+	background: #FFFFFF;
+}
+
+.etu__bg{
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.etu__img{
+	position: fixed;
+	filter: blur(10px);
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	transform: scale(1.03);
+	overflow: visible;
+}
+
+.etu__roll{
+	margin: 0 auto; 
+	z-index: 2;
+	height: 500px;
+	background: white;
+	max-width: 1280px;
+	width: 100%;
+}
