@@ -14,10 +14,14 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 $router = new League\Route\Router;
 
 // map a route
-$router->map('GET', '/', 'App\Controllers\HomeController::index');
-$router->map('GET', '/login', 'App\Controllers\HomeController::login');
-$router->map('POST', '/login', 'App\Controllers\HomeController::loginPost');
-$router->map('GET', '/test/{id}','App\Controllers\HomeController::test');
+$router->map('GET', '/', 'App\Controllers\LoginController::index');
+$router->map('GET', '/login', 'App\Controllers\LoginController::login');
+$router->map('POST', '/login', 'App\Controllers\LoginController::loginPost');
+
+
+
+$router->map('GET', '/test/{id}','App\Controllers\LoginController::test');
+
 
 
 
