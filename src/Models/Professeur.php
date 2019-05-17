@@ -6,6 +6,7 @@ namespace App\Models;
 
 class Professeur extends Model{
 
+    use Login;
     protected $id_Professeur;
     protected $identifiant;
     protected $password;

@@ -3,7 +3,7 @@
 namespace App\Models;
 
 class Etudiant extends Model {
-
+    use Login;
 	protected $id_Etudiant;
 	protected $identifiant;
     protected $password;
@@ -124,7 +124,6 @@ class Etudiant extends Model {
     {
         $this->mail = $mail;
     }
-  
-   
-    
+
+
 } 
