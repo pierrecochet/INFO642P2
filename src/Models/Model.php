@@ -6,9 +6,6 @@ namespace App\Models;
 class Model {
     static protected $table;
 
-    function __construct(){
-    }
-
     static function get_by_id($id){
         $db = Database::get_instance();
         $class = get_called_class();
@@ -28,6 +25,7 @@ class Model {
         $list = $result->fetchAll(PDO::FETCH_OBJECT,$class);
         return $list;
     }
+
   
   
    

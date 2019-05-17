@@ -6,6 +6,7 @@ namespace App\Models;
 
 class Intervenant extends Model
 {
+    use Login;
     protected $id_Intervenant;
     protected $identifiant;
     protected $password;
