@@ -39,5 +39,11 @@ class HomeController{
 	    return $response;
 	}
 
+	function etudiant(ServerRequestInterface $request){
+        $response = new Response();
+        $response->getBody()->write(EtudiantView::display($request));
+        return $response;
+    }
+
 
 }
