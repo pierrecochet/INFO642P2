@@ -38,5 +38,12 @@ class HomeController{
 	    return $response;
 	}
 
+    function loginPost($request){
+
+        $response = new Response();
+        $response->getBody()->write(Login::voidlogin());
+        return $response;
+    }
+
 
 }
