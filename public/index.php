@@ -22,6 +22,7 @@ $router->map('GET', '/test/{id}','App\Controllers\HomeController::test');
 
 
 
+
 $response = $router->dispatch($request);
 
 // send the response to the browser
