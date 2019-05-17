@@ -1,32 +1,34 @@
 <?php
 
-namespace App\Models;
 
-class Etudiant extends Model {
+namespace Models;
 
-	protected $id_Etudiant;
-	protected $identifiant;
+
+class Professeur extends Model{
+
+    protected $id_Professeur;
+    protected $identifiant;
     protected $password;
     protected $nom;
     protected $prenom;
-    protected $formation;
     protected $mail;
-    static protected $table="Etudiant";
+    protected $id_Enseignement;
+    static protected $table="Professeur";
 
     /**
      * @return mixed
      */
-    public function getIdEtudiant()
+    public function getIdProfesseur()
     {
-        return $this->id_Etudiant;
+        return $this->id_Professeur;
     }
 
     /**
-     * @param mixed $id_Etudiant
+     * @param mixed $id_Professeur
      */
-    public function setIdEtudiant($id_Etudiant)
+    public function setIdProfesseur($id_Professeur)
     {
-        $this->id_Etudiant = $id_Etudiant;
+        $this->id_Professeur = $id_Professeur;
     }
 
     /**
@@ -96,22 +98,6 @@ class Etudiant extends Model {
     /**
      * @return mixed
      */
-    public function getFormation()
-    {
-        return $this->formation;
-    }
-
-    /**
-     * @param mixed $formation
-     */
-    public function setFormation($formation)
-    {
-        $this->formation = $formation;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getMail()
     {
         return $this->mail;
@@ -124,7 +110,20 @@ class Etudiant extends Model {
     {
         $this->mail = $mail;
     }
-  
-   
-    
-} 
+
+    /**
+     * @return mixed
+     */
+    public function getIdEnseignement()
+    {
+        return $this->id_Enseignement;
+    }
+
+    /**
+     * @param mixed $id_Enseignement
+     */
+    public function setIdEnseignement($id_Enseignement)
+    {
+        $this->id_Enseignement = $id_Enseignement;
+    }
+}
