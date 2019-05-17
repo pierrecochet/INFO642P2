@@ -1,6 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+	box-sizing: border-box;
+}
 
 html{
 	height: 100%;
@@ -13,57 +16,164 @@ body{
 	-webkit-font-smoothing: antialiased;
 	font-family: Work Sans, Clear Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 	font-size: 16px;
-	color: #d9d9d9;
+	color: #000;
 	line-height: 1.6;
-	background: #9c9c9c;
+	background: #FFFFFF;
 }
 
-.menu__bar{
+.background{
 	display: flex;
-	position: fixed;
-	width: 100%;
-	box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.5);
-	z-index: 2;
-	top: 0px;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
+	align-items: center;
+	min-height: 100vh;
 }
 
-.menu__bar li a {
-	display: block;
+.bg__img{
+	position: fixed;
+	filter: blur(10px);
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	transform: scale(1.03);
+}
+
+.login__layer{
+	margin: auto;
+	box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.35);
+	z-index: 2;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 50px;
+}
+
+.login__title{
+    color: white;
+    font-family: Montserrat
+}
+
+
+.login__input{
 	color: white;
+	background: transparent;
+    border: 0.8px solid #fee9df;
+	border-radius: 3px;
+	padding: 6px;
+	margin: 5px 0;
+	width: 100%;
+	font-size: 16px;
+	font-family: Work Sans, Clear Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+}
+
+.login__input::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.login__form__submit{
+	display: flex;
+}
+
+.login__button{
+	width: 100%;
+	margin: auto;
+	border-style: none;
+	margin-top: 10px;
+	padding: 10px 0px;
+	background: #bf1844;
+    color: #fdd9cb;
+    font-weight: 600; 
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: Work Sans, Clear Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.etu__roll{
+	margin: 0 auto; 
+	z-index: 2;
+	height: 500px;
+	background: white;
+	max-width: 1280px;
+	width: 100%;
+}
+
+.etu__domaine{
+	margin: 0 auto;
+}
+
+.titre{
+	max-width: 720px;
+	margin: 0 auto;
+	min-height: 64px;
+	padding-bottom: 20px;
+}
+
+.table__container{
+	overflow: auto;
+	margin-bottom: 25px;
+}
+
+.table{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 720px;
+	border-collapse: collapse;
+}
+
+
+/*
+Attention : TP NOTÉ
+*/
+.table tr:nth-child(odd) {
+	background-color: #f2f2f2;
+
+}
+
+.table th{
+	padding: 12px 0px;
+}
+
+.table td, .table th{
+	padding: 8px 12px;
+	border-bottom: 1px solid #d6d6d6;
 	text-align: center;
-	padding: 14px 16px;
+	height: 48px;
+}
+
+
+.button {
+	outline: none;
+	margin: 0;
+	padding: 8px 12px;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #fa32c2;
+	color: inherit;
 	text-decoration: none;
 }
 
-.menu__bar li a:hover {
-	background-color: #111;
-}
-
-.menu__bar__connect{
-	margin-left: auto;
-}
-
-.main-container{
-	max-width: 1280px;
-	margin: 5% auto;
-	background-color: #ffffff;
-}
-
-.head-img{
-	max-width: 100%;
-	object-fit: cover;
-}
-
-.img-container{
-	position: relative;
-	line-height: 0;
-	height: 580px;
+.button.button--inline {
+	background-color: transparent;
+	color: #3032c2;
+	font-weight: 600;
 }
 
 
+.button.button--inline:hover {
+	background-color: rgba(255,255,255,0.4);
+	color: #3032c2;
+}
 
+.table tr:nth-child(even) .button.button--inline:hover {
+	background-color: #f0f0f0;
+
+}
+
+.table tr:nth-child(odd) .button.button--inline:hover {
+	background-color: #fff;
+
+}
+
+.align-right {
+	text-align: right !important;
+}
