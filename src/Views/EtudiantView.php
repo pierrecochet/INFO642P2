@@ -12,7 +12,7 @@ class EtudiantView {
 			</head>
 			<body>
 				<h2> Formation : ".$data['student']->getFormation()."</h2>
-				<h2> Mail : ".$data['student']->getPassword()."</h2>
+				<h2> Mail : ".$data['student']->getMail()."</h2>
 			</body>
 			</html>";
 	}

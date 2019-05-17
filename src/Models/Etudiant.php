@@ -11,7 +11,7 @@ class Etudiant extends Model {
     protected $prenom;
     protected $formation;
     protected $mail;
-    protected $table="Etudiant";
+    static protected $table="Etudiant";
 
     /**
      * @return mixed
