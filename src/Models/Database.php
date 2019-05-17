@@ -17,7 +17,7 @@ class Database
     private $host = 'localhost';
     private $dbname = 'intervenants_db';
     private $username = 'root';
-    private $password = 'root';
+    private $password = '';
 
     private function __construct(){
         try {
